@@ -27,3 +27,11 @@ short(littleprince)
 def add(a,b):
     return a+b
     
+#11654
+a = input()
+print(ord(a))
+
+
+#11720
+n = int(input())
+
