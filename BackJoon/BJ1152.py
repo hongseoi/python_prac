@@ -1,4 +1,1 @@
-s = input()
-
-lst = s.split(" ")
-print(len(lst))
+print(len(input().split()))
