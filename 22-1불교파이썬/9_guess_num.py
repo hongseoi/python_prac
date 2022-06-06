@@ -19,4 +19,4 @@ while guess != answer:
 if guess == answer:
     print("congratulations, the number of attempts=", tries)
 else:
-    print("The answer is ", number)
+    print("The answer is ", answer)
