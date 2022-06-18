@@ -41,3 +41,42 @@ score["chemistry"] =44
 animals = ("horse", "lion", "elephant")
 score = (34,33,22)
 data=(animals, score)
+
+#틱택토게임: 값 갱신해야 하므로 튜플이 아니라 리스트 이용
+
+data = [[0,0,1],[1,2,2],[0,0,0]]
+
+#리스트, 튜플 다루는 데 펴리한 함수
+
+len([1,2,3,4])
+
+a = [1,2,3]
+b = a
+a[2] = 9
+##b[2]도 9임. 생성이 아니라 참조이기 때문에
+
+a = [1,2,3]
+b = a.copy()
+a[2] = 9
+#b[2]는 9가 아니라 3
+
+#in
+
+greets = ("morning", "afternnoon", "night")
+"noon" in greets
+##false return
+
+greet = ("a","b","c")
+greet.index("a") ##0 return. 값 찾을 수 없으면 오류 리턴
+
+#sort, sorted
+#sorted:인수로 주어진 리스트나 튜플을 정렬해 복사본 반환
+
+#sort:리스트 정렬. 반환값 음슴
+fruit = ["banana", "apple", "peach"]
+
+
+
+
+
+
