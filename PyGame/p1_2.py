@@ -25,3 +25,19 @@ del weekday[2]
 print(weekday)
 weekday.pop(1)
 print(weekday)
+
+#딕셔너리
+score = {
+    'math':78,
+    "english":95,
+    "chemistry":43
+}
+
+score["math"]
+
+score["chemistry"] =44
+
+#리스트의 리스트
+animals = ("horse", "lion", "elephant")
+score = (34,33,22)
+data=(animals, score)
