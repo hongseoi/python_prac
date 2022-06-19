@@ -74,7 +74,29 @@ greet.index("a") ##0 return. 값 찾을 수 없으면 오류 리턴
 
 #sort:리스트 정렬. 반환값 음슴
 fruit = ["banana", "apple", "peach"]
+sorted(fruit) ##정렬한 복사본 반환
+fruit.sort() ##원본 정렬만함
 
+#%연산자
+val =1
+name =4
+print("val=%d, name=%s"%(val, name))
+
+#format
+"1={}, 2={}".format("one","two")
+"3={1},4={0}".format("four","three")
+
+'''
+
+#행이 길어질경우 \ 삽입하여 줄바꿈
+is_game_over = head in self.bodies or \
+    head[0]<0 or head[0]==W or \
+    head[1]==0
+
+#삼항연산자
+x=10 if a>10 else 0
+x=(a>0)? 10:20
+'''
 
 
 
