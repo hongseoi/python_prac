@@ -10,3 +10,5 @@ def make_double(x):
 
 list(map(make_double, [1,2,3]))
 ##[2,4,6] return
+
+list(map(lambda x: x*2, [1,2,3]))
