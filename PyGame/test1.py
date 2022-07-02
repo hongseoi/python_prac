@@ -1,2 +1,2 @@
 print("import test1 start")
-import import_test0
+import test0
