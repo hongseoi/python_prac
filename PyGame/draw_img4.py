@@ -1,9 +1,7 @@
 '''
-이미지 회전: transform 클래스의 rotate 메소드 사용
-변환값은 새로운 이미지의 surface 객체
-rotate(surface, angle)
+이미지를 중심 축으로 회전하는 코드
 '''
-
+from cmath import rect
 import sys
 import pygame
 from pygame.locals import QUIT
@@ -26,9 +24,10 @@ def main():
 
         SURFACE.fill((225,225,225))
 
-        #logo 회전, 왼쪽 위가 (100,30)인 위치에 로고 그리기
+        #logo 회전, 중심이 (200,150)인 위치에 로고 그리기
         new_logo = pygame.transform.rotate(logo, theta)
-        SURFACE.blit(new_logo, (100,30))
+        rect.center = (200,150)
+        SURFACE.blit(new_logo, rect)
 
         pygame.display.update()
         FPSCLOCK.tick(30)
