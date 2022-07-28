@@ -41,4 +41,4 @@ def open_tile(field, x_pos, y_pos):
             if 0<= xpos < WIDTH and 0<= ypos < HEIGHT and field[ypos][xpos] == EMPTY:
                 field[ypos][xpos] = OPENDED
                 OPEN_COUNT += 1
-            count = num_of_bombs((field,xpos,ypos))
+            count = num_of_bombs((field,xpos,ypos)
