@@ -36,9 +36,26 @@ def open_tile(field, x_pos, y_pos):
     CHECKED[y_pos][x_pos] = True
 
     for yoffset in range(-1,2):
-        for xoffeset in range(-1,2):
-            xpos, ypos = (x_pos + xoffset, y_pos+yoffset)
+        for xoffset in range(-1,2):
+            xpos, ypos = (x_pos+xoffset, y_pos+yoffset)
             if 0<= xpos < WIDTH and 0<= ypos < HEIGHT and field[ypos][xpos] == EMPTY:
                 field[ypos][xpos] = OPENDED
                 OPEN_COUNT += 1
-            count = num_of_bombs((field,xpos,ypos)
+            count = num_of_bombs(field,xpos,ypos)
+            if count == 0 and not(xpos==x_pos and y_pos==y_pos):
+                open_tile(field, xpos, ypos)
+
+def main():
+    '''메인루틴'''
+    smallfont = pygame.font.SysFont(None, 36)
+    largefont = pygame.font.SysFont(None, 72)
+    message_clear = largefont.render("!!CREARED!!", True, (0,255,255))
+    message_over = largefont.render("Game OVER", True, (0,255,255))
+    message_rect = message_clear.get_rect()
+    message_rect.center = (WIDTH*SIZE/2, HEIGHT*SIZE/2)
+    game_over = False
+    
+    field = [[EMPTY for xpos in range(WIDTH)]
+             for ypos in range(HEIGHT)]
+    
+    #폭단 설치
