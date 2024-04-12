@@ -1,0 +1,1 @@
+variable_a = 'a 변수'
